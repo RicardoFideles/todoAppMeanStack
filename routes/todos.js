@@ -34,7 +34,7 @@ router.post('/todo', function(req, res, next){
            "error" : "Invalid Date"
        })
    }else {
-       db.save(todo, function (err, result){
+       db.todos.save(todo, function (err, result){
            if (err) {
                res.send(err);
            }else {
